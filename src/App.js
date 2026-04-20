@@ -1,23 +1,32 @@
-import logo from './logo.svg';
+import React from 'react';
 import './App.css';
+import { memories } from './data';
+import PhotoCard from './PhotoCard';
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
+    <div className="app-wrapper">
+      {/* Formas orgánicas de fondo (Blobs) */}
+      <div className="blob blob-1"></div>
+      <div className="blob blob-2"></div>
+      <div className="blob blob-3"></div>
+
+      {/* Encabezado con efecto cristal */}
+      <header className="hero">
+        <div className="hero-content glass-effect">
+          <h1>365 Días Contigo</h1>
+          <p className="subtitle">Cada momento ha sido un viaje maravilloso</p>
+        </div>
       </header>
+
+      {/* Galería estilo Pinterest (Masonry) */}
+      <main className="gallery-masonry">
+        {memories.map((memory) => (
+          <div className="gallery-item" key={memory.id}>
+            <PhotoCard memory={memory} />
+          </div>
+        ))}
+      </main>
     </div>
   );
 }

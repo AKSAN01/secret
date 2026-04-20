@@ -1,38 +1,158 @@
-.App {
-  text-align: center;
+/* --- VARIABLES --- */
+:root {
+  --dark-teal: #25444B;
+  --white: #FFFFFF;
+  --ash-grey: #B1CEC6;
+  --muted-teal: #8AB6A9;
+  --seagrass: #629D8C;
+  --dark-emerald: #146C53;
+  --bg-color: #f4f9f7; /* Un blanco/verdoso muy sutil de fondo base */
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+body {
+  margin: 0;
+  /* Cambiamos Inter por Nunito para todo el texto general */
+  font-family: 'Nunito', sans-serif; 
+  background-color: var(--bg-color);
+  color: var(--dark-teal);
+  overflow-x: hidden;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+h1 {
+  /* Cambiamos Playfair por Quicksand para el título gigante */
+  font-family: 'Quicksand', sans-serif;
+  font-weight: 700; /* Un poco más gruesa para que destaque */
+  font-size: clamp(2.5rem, 6vw, 4.5rem);
+  color: var(--dark-emerald);
+  margin: 0 0 10px 0;
+  letter-spacing: -1px;
 }
 
-.App-header {
-  background-color: #282c34;
+
+.app-wrapper {
+  position: relative;
   min-height: 100vh;
+  padding-bottom: 80px;
+}
+
+/* --- BLOBS ORGÁNICOS FLOTANTES (Fondo) --- */
+.blob {
+  position: fixed; /* Se quedan en su lugar al hacer scroll */
+  border-radius: 50%;
+  filter: blur(80px); /* Difuminado extremo para que parezcan luces/sombras */
+  z-index: -1;
+  opacity: 0.6;
+  animation: float 15s ease-in-out infinite;
+}
+
+.blob-1 {
+  top: -10%;
+  left: -10%;
+  width: 50vw;
+  height: 50vw;
+  background-color: var(--ash-grey);
+}
+
+.blob-2 {
+  top: 40%;
+  right: -15%;
+  width: 45vw;
+  height: 45vw;
+  background-color: var(--muted-teal);
+  animation-delay: -5s;
+}
+
+.blob-3 {
+  bottom: -20%;
+  left: 20%;
+  width: 60vw;
+  height: 40vw;
+  background-color: var(--seagrass);
+  opacity: 0.3;
+  animation-delay: -10s;
+}
+
+@keyframes float {
+  0%, 100% { transform: translateY(0) scale(1); }
+  50% { transform: translateY(-30px) scale(1.1); }
+}
+
+/* --- HERO SECTION Y EFECTO CRISTAL --- */
+.hero {
   display: flex;
-  flex-direction: column;
-  align-items: center;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  padding: 60px 20px 40px;
+  position: relative;
+  z-index: 10;
 }
 
-.App-link {
-  color: #61dafb;
+.hero-content {
+  text-align: center;
+  padding: 40px 80px;
+  border-radius: 30px;
+  border: 1px solid rgba(255, 255, 255, 0.5); /* Borde blanco sutil */
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
+/* Glassmorphism */
+.glass-effect {
+  background: rgba(255, 255, 255, 0.4);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  box-shadow: 0 10px 40px rgba(37, 68, 75, 0.08);
+}
+
+
+.subtitle {
+  color: var(--dark-teal);
+  font-weight: 300;
+  font-size: 1.2rem;
+  margin: 0;
+  letter-spacing: 1px;
+}
+
+/* --- GALERÍA TIPO PINTEREST (MASONRY) --- */
+.gallery-masonry {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 20px;
+  /* CSS Columns hace la magia de acomodar los elementos sin huecos raros */
+  column-count: 3;
+  column-gap: 30px;
+}
+
+.gallery-item {
+  break-inside: avoid; /* Evita que una carta se parta a la mitad entre columnas */
+  margin-bottom: 30px;
+  /* Animación suave de entrada al cargar la página */
+  animation: fadeIn 1s ease-out backwards;
+}
+
+/* Hacemos que cada carta aparezca con un ligero retraso para un efecto "cascada" */
+.gallery-item:nth-child(1) { animation-delay: 0.1s; }
+.gallery-item:nth-child(2) { animation-delay: 0.2s; }
+.gallery-item:nth-child(3) { animation-delay: 0.3s; }
+.gallery-item:nth-child(4) { animation-delay: 0.4s; }
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(30px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+/* --- RESPONSIVE DESIGN --- */
+@media (max-width: 900px) {
+  .gallery-masonry {
+    column-count: 2; /* 2 columnas en tablets */
   }
-  to {
-    transform: rotate(360deg);
+  .hero-content {
+    padding: 30px 40px;
+  }
+}
+
+@media (max-width: 600px) {
+  .gallery-masonry {
+    column-count: 1; /* 1 columna en celulares */
+  }
+  .hero-content {
+    padding: 30px 20px;
   }
 }

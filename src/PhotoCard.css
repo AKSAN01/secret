@@ -1,0 +1,100 @@
+.card-container {
+  perspective: 1000px;
+  width: 100%;
+  aspect-ratio: 3/4;
+  cursor: pointer;
+}
+
+.card-inner {
+  width: 100%;
+  height: 100%;
+  position: relative;
+  transition: transform 0.8s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+  transform-style: preserve-3d;
+}
+
+.card-inner.is-flipped {
+  transform: rotateY(180deg);
+}
+
+.card-front, .card-back {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  backface-visibility: hidden;
+  border-radius: 16px;
+  box-shadow: 0 15px 35px rgba(37, 68, 75, 0.1);
+}
+
+.card-front {
+  background-color: var(--white);
+  border: 3px solid var(--muted-teal);
+  padding: 8px;
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+}
+
+.card-front img {
+  width: 100%;
+  height: 80%;
+  object-fit: cover;
+  border-radius: 4px;
+}
+
+.card-front-title {
+  height: 20%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  /* Cambiamos a Quicksand */
+  font-family: 'Quicksand', sans-serif;
+  font-weight: 600;
+  font-size: 1.2rem;
+  color: var(--dark-teal);
+}
+
+.card-back {
+  background-color: var(--ash-grey);
+  transform: rotateY(180deg);
+  padding: 30px;
+  box-sizing: border-box;
+  display: block;
+  overflow-y: auto;
+  overflow-x: hidden;
+  text-align: center;
+  border: 3px solid var(--muted-teal);
+}
+
+.back-title {
+  /* Cambiamos a Quicksand */
+  font-family: 'Quicksand', sans-serif;
+  font-weight: 700;
+  color: var(--dark-emerald);
+  margin-bottom: 20px;
+  font-size: 1.5rem;
+}
+
+.back-message {
+  font-size: 1.1rem;
+  line-height: 1.6;
+  color: var(--dark-teal);
+}
+
+.card-back::-webkit-scrollbar {
+  width: 6px;
+}
+
+.card-back::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+.card-back::-webkit-scrollbar-thumb {
+  background-color: var(--seagrass);
+  border-radius: 10px;
+}
+
+.card-container:hover .card-inner:not(.is-flipped) {
+  transform: translateY(-5px);
+  transition: transform 0.3s ease;
+}
