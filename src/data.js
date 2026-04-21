@@ -21,7 +21,7 @@ export const memories = [
 
     {
     id: 4,
-    imageUrl: "/Primerdibujo.jpg",
+    imageUrl: "/Primerdibujo2.jpg",
     date: "Una Flor amarilla",
     message: "Una de las flores mas especiales que di en mi vida, solo que esta jamas se marchitara, pensar y tomarme el tiempo de dibujarla para darte me hizo reflexionar de una cosa importante, mi corazon deseaba tu ser"
   },
