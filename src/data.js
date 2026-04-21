@@ -67,4 +67,36 @@ export const memories = [
     date: "Snoopy",
     message: "Ahora ver a Snoopy tiene un significado diferente, para mi ahora es inevitable no pensar en ti cuando ese pequeño personaje jugueton aparecen ante mis ojos, le diste un significado diferente a todo un programa solo por tenerte a ti"
   },
+
+  {
+    id: 11,
+    imageUrl: "/Arena2.jpg",
+    date: "Tu Presencia en mi mente",
+    message: "Es increble como busco en cada cosa una pisca de tu ser, no importa cuando pase pero siempre busco en cada cosa, cada momento, cada detalle, algo de tu ser, amando y abrazando todo lo que tenga tu nombre y me haga feliz"
+  },
+
+  {
+    id: 12,
+    imageUrl: "/Mcdonald2.jpg",
+    date: "La comida",
+    message: "Algo que nos unira para toda la vida sera ese gusto tan especial por la comida y sobre todo las hamburgesas, algo que no es facil de encontrar, estar con alguien y poder disfrutar con ese mismo gusto un plato de comida acompañado se siente especial y le da sazon especial a cada comida"
+  },
+
+  {
+    id: 13,
+    imageUrl: "/Regalo12.jpg",
+    date: "Eres",
+    message: "Uno de los regalos mas lindo que me han dado, una maravilla visual y con un hermoso significado, mostrandome con claridad como estaba al lado de una mujer con una capacidad increble con sus manos, logrando crear verdaderas bellezas"
+  },
+
+  {
+    id: 14,
+    imageUrl: "/Abby2.jpg",
+    date: "Tu conexion",
+    message: "Tu energia y tu educacion ha hecho que entres a mi familia de una forma tan natural, tan espontanea y tan especial, hasta abby te ve con mucha alegria y reconoce tu presencia como una persona grata he increble, algo que para mi representa mas que 1000 regalos "
+  },
+
+
+
+
 ];
