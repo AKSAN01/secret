@@ -15,7 +15,7 @@ function App() {
       <header className="hero">
         <div className="hero-content glass-effect">
           <h1>365 Días Contigo</h1>
-          <p className="subtitle">Cada momento ha sido un viaje maravilloso</p>
+          <p className="subtitle">Cada momento ha sido un viaje maravilloso y en esta pagina quiero plasmar lo mucho que significas para mi y darte un pequeño recuerdo de los sucesos que hemos vivido ❤️</p>
         </div>
       </header>
 

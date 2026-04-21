@@ -96,6 +96,12 @@ export const memories = [
     message: "Tu energia y tu educacion ha hecho que entres a mi familia de una forma tan natural, tan espontanea y tan especial, hasta abby te ve con mucha alegria y reconoce tu presencia como una persona grata he increble, algo que para mi representa mas que 1000 regalos"
   },
 
+  {
+    id: 15,
+    imageUrl: "/Snoopy2.jpg",
+    date: "Gracias",
+    message: "Muchas gracias mi amor por compartir conmigo tu tiempo tus besos tu crecimiento y poder escribir una maravillosa historia "
+  },
 
 
 
