@@ -93,7 +93,7 @@ export const memories = [
     id: 14,
     imageUrl: "/Abby2.jpg",
     date: "Tu conexion",
-    message: "Tu energia y tu educacion ha hecho que entres a mi familia de una forma tan natural, tan espontanea y tan especial, hasta abby te ve con mucha alegria y reconoce tu presencia como una persona grata he increble, algo que para mi representa mas que 1000 regalos "
+    message: "Tu energia y tu educacion ha hecho que entres a mi familia de una forma tan natural, tan espontanea y tan especial, hasta abby te ve con mucha alegria y reconoce tu presencia como una persona grata he increble, algo que para mi representa mas que 1000 regalos"
   },
 
 
